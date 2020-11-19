@@ -2,7 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<<<<<<< HEAD
 
 	<bean id="user" class="User"></bean>
+=======
+		<bean id="user" class="User">
+		</bean>
+>>>>>>> be8e4e073eb732612715a200d506903f0c645085
 
 </beans>
