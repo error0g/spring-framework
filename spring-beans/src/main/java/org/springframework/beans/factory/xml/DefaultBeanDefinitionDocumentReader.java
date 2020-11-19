@@ -151,7 +151,7 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 
 		this.delegate = parent;
 	}
-
+	//Spring BeanDefinition解析由BeanDefinitionParserDelegate完成
 	protected BeanDefinitionParserDelegate createDelegate(
 			XmlReaderContext readerContext, Element root, @Nullable BeanDefinitionParserDelegate parentDelegate) {
 
@@ -303,6 +303,10 @@ public class DefaultBeanDefinitionDocumentReader implements BeanDefinitionDocume
 	 * and registering it with the registry.
 	 */
 	protected void processBeanDefinition(Element ele, BeanDefinitionParserDelegate delegate) {
+
+//		BeanDefinitionHolder  是BeanDefinition 对象封装类 封装了是BeanDefinition ,
+//		Bean的名称和别名。 用它向IOC容器注册
+
 		BeanDefinitionHolder bdHolder = delegate.parseBeanDefinitionElement(ele);
 		if (bdHolder != null) {
 			bdHolder = delegate.decorateBeanDefinitionIfRequired(ele, bdHolder);
