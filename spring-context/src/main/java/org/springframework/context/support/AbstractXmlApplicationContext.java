@@ -123,6 +123,8 @@ public abstract class AbstractXmlApplicationContext extends AbstractRefreshableC
 		if (configResources != null) {
 			reader.loadBeanDefinitions(configResources);
 		}
+		//先调用AbstractBeanDefinitionReader的loadBeanDefinitions获取Resource，
+		//再让XmlBeanDefinitionReader调用doLoadBeanDefinitions 处理xml
 		String[] configLocations = getConfigLocations();
 		if (configLocations != null) {
 			reader.loadBeanDefinitions(configLocations);
